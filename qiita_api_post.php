@@ -1,6 +1,6 @@
 <?php
 
-$token = '2471fc0be30ae4e5153455d3fe77cee44f9c791b'; // 前準備で作っておいた、tokenを設定
+$token = ''; // 前準備で作っておいた、tokenを設定
 $base_url = 'https://qiita.com';
 
 $data = [
