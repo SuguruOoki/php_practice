@@ -10,13 +10,14 @@
  * さらに取得したい情報をクエリで絞ろー(特定のユーザーだけとか)
  *
  */
-$curl = curl_init('https://qiita.com/api/v2/items?page=1&per_page=1&query=qiita+user');
+$qiita_token = include('qiita_token.php');
+$curl        = curl_init('https://qiita.com/api/v2/items?page=1&per_page=1&query=qiita+user');
 $option = [
     CURLOPT_CUSTOMREQUEST => 'GET',
     CURLOPT_FOLLOWLOCATION => true,//curlの結果を自動で表示させない
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_HTTPHEADER => [
-        'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+        'Authorization: Bearer ' . $qiita_token['token'],
         'Content-Type: application/json',
     ],
 ];

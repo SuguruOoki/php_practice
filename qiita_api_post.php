@@ -1,6 +1,6 @@
 <?php
 
-$token = ''; // 前準備で作っておいた、tokenを設定
+$token = include('qiita_token.php'); // 前準備で作っておいた、tokenを設定
 $base_url = 'https://qiita.com';
 
 $data = [
@@ -20,7 +20,7 @@ $data = [
 ];
 
 $header = [
-    'Authorization: Bearer '.$token,  // 前準備で取得したtokenをヘッダに含める
+    'Authorization: Bearer '.$token['token'],  // 前準備で取得したtokenをヘッダに含める
     'Content-Type: application/json',
 ];
 
