@@ -1,0 +1,10 @@
+{
+    "name": "oki.suguru/php-cli-for-google",
+    "authors": [
+        {
+            "name": "Suguru Oki",
+            "email": "oki.suguru@hamee.co.jp"
+        }
+    ],
+    "require": {}
+}
